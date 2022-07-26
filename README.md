@@ -1,1 +1,5 @@
 # mytoyRpc
+
+## Build
+`./autobuild.sh`
+

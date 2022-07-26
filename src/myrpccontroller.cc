@@ -28,7 +28,7 @@ void MyrpcController::SetFailed(const std::string& reason)
     m_errText = reason;
 }
 
-// 目前未实现具体的功能
+
 void MyrpcController::StartCancel(){}
 bool MyrpcController::IsCanceled() const {return false;}
 void MyrpcController::NotifyOnCancel(google::protobuf::Closure* callback) {}

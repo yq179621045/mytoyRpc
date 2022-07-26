@@ -3,7 +3,7 @@
 #include <semaphore.h>
 #include <iostream>
 
-// 全局的watcher观察器   zkserver给zkclient的通知
+
 void global_watcher(zhandle_t *zh, int type,
                    int state, const char *path, void *watcherCtx)
 {
@@ -25,7 +25,7 @@ ZkClient::~ZkClient()
 {
     if (m_zhandle != nullptr)
     {
-        zookeeper_close(m_zhandle); // 关闭句柄，释放资源  MySQL_Conn
+        zookeeper_close(m_zhandle); 
     }
 }
 
@@ -36,13 +36,7 @@ void ZkClient::Start()
     std::string port = MyrpcApplication::GetInstance().GetConfig().Load("zookeeperport");
     std::string connstr = host + ":" + port;
     
-	/*
-	zookeeper_mt：多线程版本
-	zookeeper的API客户端程序提供了三个线程
-	API调用线程 
-	网络I/O线程  pthread_create  poll
-	watcher回调线程 pthread_create
-	*/
+
     m_zhandle = zookeeper_init(connstr.c_str(), global_watcher, 30000, nullptr, nullptr, 0);
     if (nullptr == m_zhandle) 
     {
@@ -63,7 +57,7 @@ void ZkClient::Create(const char *path, const char *data, int datalen, int state
     char path_buffer[128];
     int bufferlen = sizeof(path_buffer);
     int flag;
-	// 先判断path表示的znode节点是否存在，如果存在，就不再重复创建了
+
 	flag = zoo_exists(m_zhandle, path, 0, nullptr);
 	if (ZNONODE == flag) // 表示path的znode节点不存在
 	{

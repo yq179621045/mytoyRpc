@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libmytoyRpc.a  CMakeFiles/mytoyRpc.dir/myrpcapplication.cc.o CMakeFiles/mytoyRpc.dir/myrpcconfig.cc.o CMakeFiles/mytoyRpc.dir/rpcheader.pb.cc.o CMakeFiles/mytoyRpc.dir/rpcprovider.cc.o CMakeFiles/mytoyRpc.dir/myrpcchannel.cc.o CMakeFiles/mytoyRpc.dir/myrpccontroller.cc.o CMakeFiles/mytoyRpc.dir/logger.cc.o CMakeFiles/mytoyRpc.dir/zookeeperutil.cc.o
+/usr/bin/ranlib ../../lib/libmytoyRpc.a

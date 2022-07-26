@@ -4,10 +4,8 @@
 #include "myrpcapplication.h"
 #include "rpcprovider.h"
 
-/*
-UserService原来是一个本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
-*/
-class UserService : public lan::UserServiceRpc // 使用在rpc服务发布端（rpc服务提供者）
+
+class UserService : public lan::UserServiceRpc
 {
 public:
     bool Login(std::string name, std::string pwd)
@@ -25,17 +23,13 @@ public:
     }
 
 
-    /*
-    重写基类UserServiceRpc的虚函数 下面这些方法都是框架直接调用的
-    1. caller   ===>   Login(LoginRequest)  => muduo =>   callee 
-    2. callee   ===>    Login(LoginRequest)  => 交到下面重写的这个Login方法上了
-    */
+
     void Login(::google::protobuf::RpcController* controller,
                        const ::lan::LoginRequest* request,
                        ::lan::LoginResponse* response,
                        ::google::protobuf::Closure* done)
     {
-        // 框架给业务上报了请求参数LoginRequest，应用获取相应数据做本地业务
+
         std::string name = request->name();
         std::string pwd = request->pwd();
 

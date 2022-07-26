@@ -4,22 +4,16 @@
 #include "logger.h"
 #include "zookeeperutil.h"
 
-/*
-service_name =>  service描述   
-                        =》 service* 记录服务对象
-                        method_name  =>  method方法对象
-json   protobuf
-*/
-// 这里是框架提供给外部使用的，可以发布rpc方法的函数接口
+
 void RpcProvider::NotifyService(google::protobuf::Service *service)
 {
     ServiceInfo service_info;
 
     // 获取了服务对象的描述信息
     const google::protobuf::ServiceDescriptor *pserviceDesc = service->GetDescriptor();
-    // 获取服务的名字
+
     std::string service_name = pserviceDesc->name();
-    // 获取服务对象service的方法的数量
+
     int methodCnt = pserviceDesc->method_count();
 
     // std::cout << "service_name:" << service_name << std::endl;
@@ -46,22 +40,21 @@ void RpcProvider::Run()
     uint16_t port = atoi(MyrpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
     muduo::net::InetAddress address(ip, port);
 
-    // 创建TcpServer对象
+
     muduo::net::TcpServer server(&m_eventLoop, address, "RpcProvider");
 
-    // 绑定连接回调和消息读写回调方法  分离了网络代码和业务代码
+
     server.setConnectionCallback(std::bind(&RpcProvider::OnConnection, this, std::placeholders::_1));
     server.setMessageCallback(std::bind(&RpcProvider::OnMessage, this, std::placeholders::_1, 
             std::placeholders::_2, std::placeholders::_3));
 
-    // 设置muduo库的线程数量
+
     server.setThreadNum(4);
 
-    // 把当前rpc节点上要发布的服务全部注册到zk上面，让rpc client可以从zk上发现服务
-    // session timeout   30s     zkclient 网络I/O线程  1/3 * timeout 时间发送ping消息
+
     ZkClient zkCli;
     zkCli.Start();
-    // service_name为永久性节点    method_name为临时性节点
+
     for (auto &sp : m_serviceMap) 
     {
         // /service_name   /UserServiceRpc
@@ -69,19 +62,19 @@ void RpcProvider::Run()
         zkCli.Create(service_path.c_str(), nullptr, 0);
         for (auto &mp : sp.second.m_methodMap)
         {
-            // /service_name/method_name   /UserServiceRpc/Login 存储当前这个rpc服务节点主机的ip和port
+
             std::string method_path = service_path + "/" + mp.first;
             char method_path_data[128] = {0};
             sprintf(method_path_data, "%s:%d", ip.c_str(), port);
-            // ZOO_EPHEMERAL表示znode是一个临时性节点
+
             zkCli.Create(method_path.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
         }
     }
 
-    // rpc服务端准备启动，打印信息
+
     std::cout << "RpcProvider start service at ip:" << ip << " port:" << port << std::endl;
 
-    // 启动网络服务
+
     server.start();
     m_eventLoop.loop(); 
 }

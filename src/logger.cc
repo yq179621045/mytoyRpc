@@ -44,7 +44,7 @@ Logger::Logger()
             fclose(pf);
         }
     });
-    // 设置分离线程，守护线程
+
     writeLogTask.detach();
 }
 
