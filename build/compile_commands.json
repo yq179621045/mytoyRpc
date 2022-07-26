@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/myrpcapplication.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcapplication.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcapplication.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/myrpcconfig.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcconfig.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcconfig.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/rpcheader.pb.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/rpcheader.pb.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/rpcprovider.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/rpcprovider.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/myrpcchannel.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcchannel.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpcchannel.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/myrpccontroller.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpccontroller.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/myrpccontroller.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/logger.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/logger.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/logger.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/src",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/mytoyRpc.dir/zookeeperutil.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/zookeeperutil.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/zookeeperutil.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/example/callee",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/callee/friendservice.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/callee/friendservice.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/example/callee",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/friend.pb.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/friend.pb.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/example/caller",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/consumer.dir/callfriendservice.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/caller/callfriendservice.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/caller/callfriendservice.cc"
+},
+{
+  "directory": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/build/example/caller",
+  "command": "/usr/bin/g++-7   -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/src/include -I/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example  -g   -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/friend.pb.cc",
+  "file": "/home/lan/VscodeProject/MyToy/gitproject/mytoyRpc/example/friend.pb.cc"
+}
+]
